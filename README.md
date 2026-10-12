@@ -1,10 +1,12 @@
-# ClimaX inference on PACE ICE
+# ClimaX Inference on PACE ICE
 
-I used AI to help me understand ClimaX and to write and test the inference code. I found a pretrained checkpoint, but I couldn't find a simple inference example that worked directly with it on ICE. I did not train or fine-tune the model.
+I used AI to help me understand ClimaX and write and test the inference script. I found a pretrained checkpoint, but not a simple example that I could run directly on ICE. My goal was to run inference with an existing model, not train or fine-tune one.
 
 ## Setup
 
-Setting up the environment was difficult at first. Instead of installing everything manually each time, I made a setup script and ran it on a CPU compute node through SLURM.
+Setting up the environment took some trial and error. I had trouble installing everything on the login node, so I made a script to handle the installation in one step on a CPU compute node.
+
+On PACE ICE, clone this repository into `~/climax-inference` and submit the setup job:
 
 ```bash
 git clone https://github.com/acceleratorxm7/climax-inference.git ~/climax-inference
@@ -12,43 +14,43 @@ cd ~/climax-inference
 sbatch scripts/setup.slurm
 ```
 
-Wait for the setup job to finish and check its status using the job ID printed by `sbatch`:
+The setup script clones [Microsoft ClimaX](https://github.com/microsoft/ClimaX) at commit `6d5d354ffb4b91bb684f430b98e8f6f8af7c7f7c`, creates the Python environment using the upstream `docker/environment.yml`, and downloads the [5.625-degree checkpoint](https://huggingface.co/tungnd/climax). The checkpoint contains pretrained model weights, not the weather dataset. The script also checks the checkpoint's SHA-256 hash.
+
+Wait for the job to finish before running inference. Replace `JOB_ID` with the number returned by `sbatch`:
 
 ```bash
 sacct -j JOB_ID --format=JobID,State,ExitCode
 ```
 
-Continue only when it shows `COMPLETED` with exit code `0:0`.
-
-The setup script clones the [Microsoft ClimaX repository](https://github.com/microsoft/ClimaX), uses commit `6d5d354ffb4b91bb684f430b98e8f6f8af7c7f7c`, and installs the environment from its `docker/environment.yml`. It also downloads the [5.625-degree checkpoint](https://huggingface.co/tungnd/climax), which contains pretrained model weights. It verifies the downloaded checkpoint using SHA-256.
+The job should show `COMPLETED` with exit code `0:0`.
 
 ## Inference
 
-I used an LLM to help create `scripts/infer.py`, then tested it on ICE. It loads the checkpoint, reads ERA5 data from [WeatherBench 2](https://weatherbench2.readthedocs.io/en/latest/data-guide.html), and runs ClimaX on an A100 GPU.
+I used an LLM to help create `scripts/infer.py` and debugged it using the ICE job logs. The script loads the checkpoint into ClimaX and reads ERA5 data from [WeatherBench 2](https://weatherbench2.readthedocs.io/en/latest/data-guide.html). It runs the model on an A100 GPU.
 
 ```bash
 sbatch scripts/infer.slurm
 ```
 
-When that job finishes, check its status and open the result:
+After the job finishes, check its status and read the output:
 
 ```bash
 sacct -j JOB_ID --format=JobID,State,ExitCode
 cat results/era5/report.json
 ```
 
-A successful run should produce `results/era5/report.json` and `results/era5/prediction.npz`. The report includes the eight sample results, MAE/RMSE, checkpoint hash, GPU details, and repeatability check. The saved report from my run is in `evidence/report.json`.
+I tested eight time points with three variables: 2 m temperature and the two 10 m wind components. I compared the model output against ERA5 six hours later, as well as a simple baseline that assumes the weather does not change. The script calculates latitude-weighted MAE and RMSE. It also checks that the checkpoint loads, the output shape is correct, there are no NaN or infinite values, and repeated inference gives the same output.
 
-I used eight time points and three weather variables: 2 m temperature, 10 m east-west wind, and 10 m north-south wind. I compared the output with ERA5 data six hours later. I also compared it with a basic persistence prediction, which assumes the weather stays the same. The script calculates MAE and RMSE, and runs the same input again to check repeatability.
+The script saves `results/era5/report.json` and `results/era5/prediction.npz`. A copy of the JSON report from my run is in `evidence/report.json`.
 
-## Results
+## Results and Evidence
 
-I reset the project and ran both scripts again on October 11, 2026. Setup job `6192427` and inference job `6192943` both finished with `COMPLETED 0:0`. Inference ran on an NVIDIA A100 80GB PCIe GPU. Repeating the inference gave the same output (`max difference = 0.0`).
+I reset the project and ran setup and inference again on October 11, 2026. Setup job `6192427` completed in 10 minutes 50 seconds on `ice-cpu`. Inference job `6192943` completed in 43 seconds on `ice-gpu`, using an NVIDIA A100 80GB PCIe. Both jobs finished with exit code `0:0`.
 
-For temperature, the ClimaX RMSE was 8.602 K, compared with 2.465 K for persistence. For the two wind variables, ClimaX RMSE was 5.427 and 4.131 m/s; persistence gave 1.486 and 1.769 m/s.
+The model produced the same output when I repeated inference (`maximum difference = 0.0`). The ClimaX RMSE was 8.602 K for temperature and 5.427 and 4.131 m/s for the two wind components. The simple baseline had lower errors in this test.
 
-The full numbers for all eight samples are in `evidence/report.json`. The job records are in `evidence/slurm.txt`, and the setup and inference logs are in `evidence/setup.log` and `evidence/inference.log` in the submitted repository. The initial attempt to install on the login node did not work, so I moved installation to a CPU SLURM job. No training or calibration was performed.
+The actual results are in `evidence/report.json`. I also included `evidence/slurm.txt` for job statuses, `evidence/setup.log` for installation output, and `evidence/inference.log` for the inference output.
 
 ## Limitations
 
-The model ran, but its outputs were farther from the ERA5 data than the basic persistence prediction. I used pretrained weights without ERA5 fine-tuning and had to assume normalization values and a lead-time setting. This means my test shows that the inference works, but not how accurate ClimaX would be with the proper forecasting setup.
+The model ran, but its output was not as close to the ERA5 data as the simple baseline. I used pretrained weights without ERA5 forecast fine-tuning and assumed normalization values and a lead-time setting. So this test shows that I could run and check inference on ICE, not how accurate ClimaX would be with the correct forecasting setup.
