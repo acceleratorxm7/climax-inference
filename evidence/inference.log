@@ -1,0 +1,67 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-11-2026 19:50:14
+Job ID:    6192943
+User ID:   clee3109
+Account:   coc
+Job name:  climax-era5
+Partition: ice-gpu
+QOS:       coc-ice
+---------------------------------------
+{
+  "scope": "Diagnostic only: CMIP6 pretrained weights, assumed normalization, no ERA5 forecast fine-tuning",
+  "sample_indices": [
+    0,
+    120,
+    1460,
+    5840,
+    20000,
+    40000,
+    60000,
+    80000
+  ],
+  "repeat_max_abs_difference": 0.0,
+  "aggregate": {
+    "2m_temperature": {
+      "model": {
+        "mae": 7.129930408325217,
+        "rmse": 8.601535049099034
+      },
+      "persistence": {
+        "mae": 1.2979422893190815,
+        "rmse": 2.465195543019325
+      }
+    },
+    "10m_u_component_of_wind": {
+      "model": {
+        "mae": 4.455406072727864,
+        "rmse": 5.426946236251897
+      },
+      "persistence": {
+        "mae": 0.9785963371287655,
+        "rmse": 1.486150209038387
+      }
+    },
+    "10m_v_component_of_wind": {
+      "model": {
+        "mae": 3.2047176173361143,
+        "rmse": 4.1310972600207325
+      },
+      "persistence": {
+        "mae": 1.119607023178528,
+        "rmse": 1.7689020219747824
+      }
+    }
+  }
+}
+---------------------------------------
+Begin Slurm Epilog: Oct-11-2026 19:50:50
+Job ID:        6192943
+User ID:       clee3109
+Account:       coc
+Job name:      climax-era5
+Resources:     cpu=4,gres/gpu:a100=1,mem=24G,node=1
+Rsrc Used:     cput=00:02:52,vmem=0,walltime=00:00:43,mem=5169912K,energy_used=0
+Partition:     ice-gpu
+QOS:           coc-ice
+Nodes:         atl1-1-01-005-15-0
+---------------------------------------

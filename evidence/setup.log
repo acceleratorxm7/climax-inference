@@ -1,0 +1,482 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-11-2026 19:35:06
+Job ID:    6192427
+User ID:   clee3109
+Account:   coc
+Job name:  climax-setup
+Partition: ice-cpu
+QOS:       coc-ice
+---------------------------------------
+Cloning into 'upstream'...
+Note: switching to '6d5d354ffb4b91bb684f430b98e8f6f8af7c7f7c'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 6d5d354 Update version in pyproject.toml
+
+
+Looking for: ['_libgcc_mutex==0.1=conda_forge', '_openmp_mutex==4.5=2_kmp_llvm', 'appdirs==1.4.4=pyh9f0ad1d_0', 'asciitree==0.3.3=py_2', 'blas==1.0=mkl', 'bokeh==2.4.3=pyhd8ed1ab_3', 'bottleneck==1.3.6=py38h7e4f40d_0', 'brotlipy==0.7.0=py38h27cfd23_1003', 'bzip2==1.0.8=h7b6447c_0', 'c-ares==1.18.1=h7f98852_0', 'ca-certificates==2022.12.7=ha878542_0', 'certifi==2022.12.7=pyhd8ed1ab_0', 'cf_xarray==0.7.9=pyhd8ed1ab_0', 'cffi==1.15.1=py38h5eee18b_3', 'cftime==1.6.2=py38h26c90d9_1', 'charset-normalizer==2.0.4=pyhd3eb1b0_0', 'click==8.1.3=unix_pyhd8ed1ab_2', 'cloudpickle==2.2.1=pyhd8ed1ab_0', 'cryptography==38.0.4=py38h9ce1e76_0', 'cudatoolkit==11.3.1=h2bc3f7f_2', 'curl==7.87.0=h6312ad2_0', 'cytoolz==0.12.0=py38h0a891b7_1', 'dask==2023.1.1=pyhd8ed1ab_0', 'dask-core==2023.1.1=pyhd8ed1ab_0', 'distributed==2023.1.1=pyhd8ed1ab_0', 'entrypoints==0.4=pyhd8ed1ab_0', 'esmf==8.4.0=nompi_hdb2cfa9_3', 'esmpy==8.4.0=nompi_py38h2b78397_1', 'fasteners==0.17.3=pyhd8ed1ab_0', 'ffmpeg==4.3=hf484d3e_0', 'fftw==3.3.10=nompi_hf0379b8_106', 'flit-core==3.6.0=pyhd3eb1b0_0', 'freetype==2.12.1=h4a9f257_0', 'fsspec==2023.1.0=pyhd8ed1ab_0', 'geos==3.11.1=h27087fc_0', 'giflib==5.2.1=h5eee18b_1', 'gmp==6.2.1=h295c915_3', 'gnutls==3.6.15=he1e5248_0', 'hdf4==4.2.15=h9772cbc_5', 'hdf5==1.12.2=nompi_h2386368_101', 'heapdict==1.0.1=py_0', 'idna==3.4=py38h06a4308_0', 'importlib-metadata==6.0.0=pyha770c72_0', 'intel-openmp==2021.4.0=h06a4308_3561', 'jinja2==3.1.2=pyhd8ed1ab_1', 'jpeg==9e=h7f8727e_0', 'keyutils==1.6.1=h166bdaf_0', 'krb5==1.20.1=hf9c8cef_0', 'lame==3.100=h7b6447c_0', 'lcms2==2.12=h3be6417_0', 'ld_impl_linux-64==2.38=h1181459_1', 'lerc==3.0=h295c915_0', 'libaec==1.0.6=hcb278e6_1', 'libcurl==7.87.0=h6312ad2_0', 'libdeflate==1.8=h7f8727e_5', 'libedit==3.1.20191231=he28a2e2_2', 'libev==4.33=h516909a_1', 'libffi==3.4.2=h6a678d5_6', 'libgcc-ng==12.2.0=h65d4601_19', 'libgfortran-ng==12.2.0=h69a702a_19', 'libgfortran5==12.2.0=h337968e_19', 'libiconv==1.16=h7f8727e_2', 'libidn2==2.3.2=h7f8727e_0', 'libllvm11==11.1.0=he0ac6c6_5', 'libnetcdf==4.8.1=nompi_h21705cb_104', 'libnghttp2==1.51.0=hdcd2b5c_0', 'libpng==1.6.37=hbc83047_0', 'libssh2==1.10.0=haa6b8db_3', 'libstdcxx-ng==12.2.0=h46fd767_19', 'libtasn1==4.16.0=h27cfd23_0', 'libtiff==4.5.0=h6a678d5_1', 'libunistring==0.9.10=h27cfd23_0', 'libwebp==1.2.4=h11a3e52_0', 'libwebp-base==1.2.4=h5eee18b_0', 'libzip==1.9.2=hc869a4a_1', 'libzlib==1.2.13=h166bdaf_4', 'llvm-openmp==15.0.7=h0cdce71_0', 'llvmlite==0.39.1=py38h38d86a4_1', 'locket==1.0.0=pyhd8ed1ab_0', 'lz4==4.2.0=py38hd012fdc_0', 'lz4-c==1.9.4=h6a678d5_0', 'markupsafe==2.1.2=py38h1de0b5d_0', 'mkl==2021.4.0=h06a4308_640', 'mkl-service==2.4.0=py38h7f8727e_0', 'mkl_fft==1.3.1=py38hd3c417c_0', 'mkl_random==1.2.2=py38h51133e4_0', 'msgpack-python==1.0.4=py38h43d8883_1', 'ncurses==6.4=h6a678d5_0', 'netcdf-fortran==4.6.0=nompi_he1eeb6f_102', 'netcdf4==1.6.2=nompi_py38h2250339_100', 'nettle==3.7.3=hbbd107a_1', 'numba==0.56.4=py38h9a4aae9_0', 'numcodecs==0.11.0=py38h8dc9893_1', 'numpy==1.23.5=py38h14f4228_0', 'numpy-base==1.23.5=py38h31eccc5_0', 'openh264==2.1.1=h4ff587b_0', 'openssl==1.1.1s=h0b41bf4_1', 'packaging==23.0=pyhd8ed1ab_0', 'pandas==1.5.3=py38hdc8b05c_0', 'partd==1.3.0=pyhd8ed1ab_0', 'pillow==9.3.0=py38h6a678d5_2', 'pip==22.3.1=py38h06a4308_0', 'pooch==1.6.0=pyhd8ed1ab_0', 'portalocker==2.3.0=py38h06a4308_0', 'psutil==5.9.4=py38h0a891b7_0', 'pycparser==2.21=pyhd3eb1b0_0', 'pyopenssl==22.0.0=pyhd3eb1b0_0', 'pysocks==1.7.1=py38h06a4308_0', 'python==3.8.16=h7a1cb2a_2', 'python-dateutil==2.8.2=pyhd8ed1ab_0', 'python_abi==3.8=2_cp38', 'pytorch==1.12.1=py3.8_cuda11.3_cudnn8.3.2_0', 'pytorch-mutex==1.0=cuda', 'pytz==2022.7.1=pyhd8ed1ab_0', 'pyyaml==6.0=py38h0a891b7_5', 'readline==8.2=h5eee18b_0', 'requests==2.28.1=py38h06a4308_0', 'scipy==1.10.0=py38h14f4228_0', 'setuptools==65.6.3=py38h06a4308_0', 'shapely==1.8.5=py38hafd38ec_2', 'six==1.16.0=pyhd3eb1b0_1', 'sortedcontainers==2.4.0=pyhd8ed1ab_0', 'sparse==0.13.0=pyhd8ed1ab_0', 'sqlite==3.40.1=h5082296_0', 'tblib==1.7.0=pyhd8ed1ab_0', 'tk==8.6.12=h1ccaba5_0', 'toolz==0.12.0=pyhd8ed1ab_0', 'torchaudio==0.12.1=py38_cu113', 'torchdata==0.4.1=py38', 'torchvision==0.13.1=py38_cu113', 'tornado==6.2=py38h0a891b7_1', 'typing_extensions==4.4.0=py38h06a4308_0', 'urllib3==1.26.14=py38h06a4308_0', 'wheel==0.37.1=pyhd3eb1b0_0', 'xarray==2023.1.0=pyhd8ed1ab_0', 'xesmf==0.7.0=pyhd8ed1ab_0', 'xz==5.2.10=h5eee18b_1', 'yaml==0.2.5=h7f98852_2', 'zarr==2.13.6=pyhd8ed1ab_0', 'zict==2.2.0=pyhd8ed1ab_0', 'zipp==3.12.1=pyhd8ed1ab_0', 'zlib==1.2.13=h166bdaf_4', 'zstd==1.5.2=ha4553b6_0']
+
+
+Transaction
+
+  Prefix: /home/hice1/clee3109/climax-inference/climax-env
+
+  Updating specs:
+
+   - _libgcc_mutex==0.1=conda_forge
+   - _openmp_mutex==4.5=2_kmp_llvm
+   - appdirs==1.4.4=pyh9f0ad1d_0
+   - asciitree==0.3.3=py_2
+   - blas==1.0=mkl
+   - bokeh==2.4.3=pyhd8ed1ab_3
+   - bottleneck==1.3.6=py38h7e4f40d_0
+   - brotlipy==0.7.0=py38h27cfd23_1003
+   - bzip2==1.0.8=h7b6447c_0
+   - c-ares==1.18.1=h7f98852_0
+   - ca-certificates==2022.12.7=ha878542_0
+   - certifi==2022.12.7=pyhd8ed1ab_0
+   - cf_xarray==0.7.9=pyhd8ed1ab_0
+   - cffi==1.15.1=py38h5eee18b_3
+   - cftime==1.6.2=py38h26c90d9_1
+   - charset-normalizer==2.0.4=pyhd3eb1b0_0
+   - click==8.1.3=unix_pyhd8ed1ab_2
+   - cloudpickle==2.2.1=pyhd8ed1ab_0
+   - cryptography==38.0.4=py38h9ce1e76_0
+   - cudatoolkit==11.3.1=h2bc3f7f_2
+   - curl==7.87.0=h6312ad2_0
+   - cytoolz==0.12.0=py38h0a891b7_1
+   - dask==2023.1.1=pyhd8ed1ab_0
+   - dask-core==2023.1.1=pyhd8ed1ab_0
+   - distributed==2023.1.1=pyhd8ed1ab_0
+   - entrypoints==0.4=pyhd8ed1ab_0
+   - esmf==8.4.0=nompi_hdb2cfa9_3
+   - esmpy==8.4.0=nompi_py38h2b78397_1
+   - fasteners==0.17.3=pyhd8ed1ab_0
+   - ffmpeg==4.3=hf484d3e_0
+   - fftw==3.3.10=nompi_hf0379b8_106
+   - flit-core==3.6.0=pyhd3eb1b0_0
+   - freetype==2.12.1=h4a9f257_0
+   - fsspec==2023.1.0=pyhd8ed1ab_0
+   - geos==3.11.1=h27087fc_0
+   - giflib==5.2.1=h5eee18b_1
+   - gmp==6.2.1=h295c915_3
+   - gnutls==3.6.15=he1e5248_0
+   - hdf4==4.2.15=h9772cbc_5
+   - hdf5==1.12.2=nompi_h2386368_101
+   - heapdict==1.0.1=py_0
+   - idna==3.4=py38h06a4308_0
+   - importlib-metadata==6.0.0=pyha770c72_0
+   - intel-openmp==2021.4.0=h06a4308_3561
+   - jinja2==3.1.2=pyhd8ed1ab_1
+   - jpeg==9e=h7f8727e_0
+   - keyutils==1.6.1=h166bdaf_0
+   - krb5==1.20.1=hf9c8cef_0
+   - lame==3.100=h7b6447c_0
+   - lcms2==2.12=h3be6417_0
+   - ld_impl_linux-64==2.38=h1181459_1
+   - lerc==3.0=h295c915_0
+   - libaec==1.0.6=hcb278e6_1
+   - libcurl==7.87.0=h6312ad2_0
+   - libdeflate==1.8=h7f8727e_5
+   - libedit==3.1.20191231=he28a2e2_2
+   - libev==4.33=h516909a_1
+   - libffi==3.4.2=h6a678d5_6
+   - libgcc-ng==12.2.0=h65d4601_19
+   - libgfortran-ng==12.2.0=h69a702a_19
+   - libgfortran5==12.2.0=h337968e_19
+   - libiconv==1.16=h7f8727e_2
+   - libidn2==2.3.2=h7f8727e_0
+   - libllvm11==11.1.0=he0ac6c6_5
+   - libnetcdf==4.8.1=nompi_h21705cb_104
+   - libnghttp2==1.51.0=hdcd2b5c_0
+   - libpng==1.6.37=hbc83047_0
+   - libssh2==1.10.0=haa6b8db_3
+   - libstdcxx-ng==12.2.0=h46fd767_19
+   - libtasn1==4.16.0=h27cfd23_0
+   - libtiff==4.5.0=h6a678d5_1
+   - libunistring==0.9.10=h27cfd23_0
+   - libwebp==1.2.4=h11a3e52_0
+   - libwebp-base==1.2.4=h5eee18b_0
+   - libzip==1.9.2=hc869a4a_1
+   - libzlib==1.2.13=h166bdaf_4
+   - llvm-openmp==15.0.7=h0cdce71_0
+   - llvmlite==0.39.1=py38h38d86a4_1
+   - locket==1.0.0=pyhd8ed1ab_0
+   - lz4==4.2.0=py38hd012fdc_0
+   - lz4-c==1.9.4=h6a678d5_0
+   - markupsafe==2.1.2=py38h1de0b5d_0
+   - mkl==2021.4.0=h06a4308_640
+   - mkl-service==2.4.0=py38h7f8727e_0
+   - mkl_fft==1.3.1=py38hd3c417c_0
+   - mkl_random==1.2.2=py38h51133e4_0
+   - msgpack-python==1.0.4=py38h43d8883_1
+   - ncurses==6.4=h6a678d5_0
+   - netcdf-fortran==4.6.0=nompi_he1eeb6f_102
+   - netcdf4==1.6.2=nompi_py38h2250339_100
+   - nettle==3.7.3=hbbd107a_1
+   - numba==0.56.4=py38h9a4aae9_0
+   - numcodecs==0.11.0=py38h8dc9893_1
+   - numpy==1.23.5=py38h14f4228_0
+   - numpy-base==1.23.5=py38h31eccc5_0
+   - openh264==2.1.1=h4ff587b_0
+   - openssl==1.1.1s=h0b41bf4_1
+   - packaging==23.0=pyhd8ed1ab_0
+   - pandas==1.5.3=py38hdc8b05c_0
+   - partd==1.3.0=pyhd8ed1ab_0
+   - pillow==9.3.0=py38h6a678d5_2
+   - pip==22.3.1=py38h06a4308_0
+   - pooch==1.6.0=pyhd8ed1ab_0
+   - portalocker==2.3.0=py38h06a4308_0
+   - psutil==5.9.4=py38h0a891b7_0
+   - pycparser==2.21=pyhd3eb1b0_0
+   - pyopenssl==22.0.0=pyhd3eb1b0_0
+   - pysocks==1.7.1=py38h06a4308_0
+   - python==3.8.16=h7a1cb2a_2
+   - python-dateutil==2.8.2=pyhd8ed1ab_0
+   - python_abi==3.8=2_cp38
+   - pytorch==1.12.1=py3.8_cuda11.3_cudnn8.3.2_0
+   - pytorch-mutex==1.0=cuda
+   - pytz==2022.7.1=pyhd8ed1ab_0
+   - pyyaml==6.0=py38h0a891b7_5
+   - readline==8.2=h5eee18b_0
+   - requests==2.28.1=py38h06a4308_0
+   - scipy==1.10.0=py38h14f4228_0
+   - setuptools==65.6.3=py38h06a4308_0
+   - shapely==1.8.5=py38hafd38ec_2
+   - six==1.16.0=pyhd3eb1b0_1
+   - sortedcontainers==2.4.0=pyhd8ed1ab_0
+   - sparse==0.13.0=pyhd8ed1ab_0
+   - sqlite==3.40.1=h5082296_0
+   - tblib==1.7.0=pyhd8ed1ab_0
+   - tk==8.6.12=h1ccaba5_0
+   - toolz==0.12.0=pyhd8ed1ab_0
+   - torchaudio==0.12.1=py38_cu113
+   - torchdata==0.4.1=py38
+   - torchvision==0.13.1=py38_cu113
+   - tornado==6.2=py38h0a891b7_1
+   - typing_extensions==4.4.0=py38h06a4308_0
+   - urllib3==1.26.14=py38h06a4308_0
+   - wheel==0.37.1=pyhd3eb1b0_0
+   - xarray==2023.1.0=pyhd8ed1ab_0
+   - xesmf==0.7.0=pyhd8ed1ab_0
+   - xz==5.2.10=h5eee18b_1
+   - yaml==0.2.5=h7f98852_2
+   - zarr==2.13.6=pyhd8ed1ab_0
+   - zict==2.2.0=pyhd8ed1ab_0
+   - zipp==3.12.1=pyhd8ed1ab_0
+   - zlib==1.2.13=h166bdaf_4
+   - zstd==1.5.2=ha4553b6_0
+
+
+  Package                    Version  Build                        Channel           Size
+───────────────────────────────────────────────────────────────────────────────────────────
+  Install:
+───────────────────────────────────────────────────────────────────────────────────────────
+
+  + _libgcc_mutex                0.1  conda_forge                  conda-forge     Cached
+  + ca-certificates        2022.12.7  ha878542_0                   conda-forge     Cached
+  + libgfortran5              12.2.0  h337968e_19                  conda-forge     Cached
+  + libstdcxx-ng              12.2.0  h46fd767_19                  conda-forge     Cached
+  + _openmp_mutex                4.5  2_kmp_llvm                   conda-forge     Cached
+  + libgcc-ng                 12.2.0  h65d4601_19                  conda-forge     Cached
+  + libzlib                   1.2.13  h166bdaf_4                   conda-forge     Cached
+  + llvm-openmp               15.0.7  h0cdce71_0                   conda-forge     Cached
+  + libgfortran-ng            12.2.0  h69a702a_19                  conda-forge     Cached
+  + zlib                      1.2.13  h166bdaf_4                   conda-forge     Cached
+  + yaml                       0.2.5  h7f98852_2                   conda-forge     Cached
+  + openssl                   1.1.1s  h0b41bf4_1                   conda-forge     Cached
+  + libllvm11                 11.1.0  he0ac6c6_5                   conda-forge     Cached
+  + libev                       4.33  h516909a_1                   conda-forge     Cached
+  + libaec                     1.0.6  hcb278e6_1                   conda-forge     Cached
+  + keyutils                   1.6.1  h166bdaf_0                   conda-forge     Cached
+  + geos                      3.11.1  h27087fc_0                   conda-forge     Cached
+  + c-ares                    1.18.1  h7f98852_0                   conda-forge     Cached
+  + fftw                      3.3.10  nompi_hf0379b8_106           conda-forge     Cached
+  + libssh2                   1.10.0  haa6b8db_3                   conda-forge     Cached
+  + libnghttp2                1.51.0  hdcd2b5c_0                   conda-forge     Cached
+  + intel-openmp            2021.4.0  h06a4308_3561                pkgs/main       Cached
+  + ld_impl_linux-64            2.38  h1181459_1                   pkgs/main       Cached
+  + xz                        5.2.10  h5eee18b_1                   pkgs/main       Cached
+  + openh264                   2.1.1  h4ff587b_0                   pkgs/main       Cached
+  + ncurses                      6.4  h6a678d5_0                   pkgs/main       Cached
+  + lz4-c                      1.9.4  h6a678d5_0                   pkgs/main       Cached
+  + libwebp-base               1.2.4  h5eee18b_0                   pkgs/main       Cached
+  + libunistring              0.9.10  h27cfd23_0                   pkgs/main       Cached
+  + libtasn1                  4.16.0  h27cfd23_0                   pkgs/main       Cached
+  + libiconv                    1.16  h7f8727e_2                   pkgs/main       Cached
+  + libffi                     3.4.2  h6a678d5_6                   pkgs/main       Cached
+  + libdeflate                   1.8  h7f8727e_5                   pkgs/main       Cached
+  + lerc                         3.0  h295c915_0                   pkgs/main       Cached
+  + lame                       3.100  h7b6447c_0                   pkgs/main       Cached
+  + jpeg                          9e  h7f8727e_0                   pkgs/main       Cached
+  + gmp                        6.2.1  h295c915_3                   pkgs/main       Cached
+  + giflib                     5.2.1  h5eee18b_1                   pkgs/main       Cached
+  + cudatoolkit               11.3.1  h2bc3f7f_2                   pkgs/main       Cached
+  + bzip2                      1.0.8  h7b6447c_0                   pkgs/main       Cached
+  + tk                        8.6.12  h1ccaba5_0                   pkgs/main       Cached
+  + libpng                    1.6.37  hbc83047_0                   pkgs/main       Cached
+  + mkl                     2021.4.0  h06a4308_640                 pkgs/main       Cached
+  + readline                     8.2  h5eee18b_0                   pkgs/main       Cached
+  + zstd                       1.5.2  ha4553b6_0                   pkgs/main       Cached
+  + libidn2                    2.3.2  h7f8727e_0                   pkgs/main       Cached
+  + nettle                     3.7.3  hbbd107a_1                   pkgs/main       Cached
+  + freetype                  2.12.1  h4a9f257_0                   pkgs/main       Cached
+  + sqlite                    3.40.1  h5082296_0                   pkgs/main       Cached
+  + libtiff                    4.5.0  h6a678d5_1                   pkgs/main       Cached
+  + gnutls                    3.6.15  he1e5248_0                   pkgs/main       Cached
+  + python                    3.8.16  h7a1cb2a_2                   pkgs/main       Cached
+  + libwebp                    1.2.4  h11a3e52_0                   pkgs/main       Cached
+  + lcms2                       2.12  h3be6417_0                   pkgs/main       Cached
+  + pytorch-mutex                1.0  cuda                         pytorch         Cached
+  + libedit             3.1.20191231  he28a2e2_2                   conda-forge     Cached
+  + hdf4                      4.2.15  h9772cbc_5                   conda-forge     Cached
+  + libzip                     1.9.2  hc869a4a_1                   conda-forge     Cached
+  + blas                         1.0  mkl                          conda-forge     Cached
+  + krb5                      1.20.1  hf9c8cef_0                   conda-forge     Cached
+  + libcurl                   7.87.0  h6312ad2_0                   conda-forge     Cached
+  + hdf5                      1.12.2  nompi_h2386368_101           conda-forge     Cached
+  + curl                      7.87.0  h6312ad2_0                   conda-forge     Cached
+  + libnetcdf                  4.8.1  nompi_h21705cb_104           conda-forge     Cached
+  + netcdf-fortran             4.6.0  nompi_he1eeb6f_102           conda-forge     Cached
+  + esmf                       8.4.0  nompi_hdb2cfa9_3             conda-forge     Cached
+  + ffmpeg                       4.3  hf484d3e_0                   pytorch         Cached
+  + wheel                     0.37.1  pyhd3eb1b0_0                 pkgs/main       Cached
+  + certifi                2022.12.7  pyhd8ed1ab_0                 conda-forge     Cached
+  + setuptools                65.6.3  py38h06a4308_0               pkgs/main       Cached
+  + pip                       22.3.1  py38h06a4308_0               pkgs/main       Cached
+  + pysocks                    1.7.1  py38h06a4308_0               pkgs/main       Cached
+  + portalocker                2.3.0  py38h06a4308_0               pkgs/main       Cached
+  + pillow                     9.3.0  py38h6a678d5_2               pkgs/main       Cached
+  + idna                         3.4  py38h06a4308_0               pkgs/main       Cached
+  + heapdict                   1.0.1  py_0                         conda-forge     Cached
+  + asciitree                  0.3.3  py_2                         conda-forge     Cached
+  + zipp                      3.12.1  pyhd8ed1ab_0                 conda-forge     Cached
+  + toolz                     0.12.0  pyhd8ed1ab_0                 conda-forge     Cached
+  + tblib                      1.7.0  pyhd8ed1ab_0                 conda-forge     Cached
+  + sortedcontainers           2.4.0  pyhd8ed1ab_0                 conda-forge     Cached
+  + pytz                    2022.7.1  pyhd8ed1ab_0                 conda-forge     Cached
+  + packaging                   23.0  pyhd8ed1ab_0                 conda-forge     Cached
+  + locket                     1.0.0  pyhd8ed1ab_0                 conda-forge     Cached
+  + fsspec                  2023.1.0  pyhd8ed1ab_0                 conda-forge     Cached
+  + fasteners                 0.17.3  pyhd8ed1ab_0                 conda-forge     Cached
+  + entrypoints                  0.4  pyhd8ed1ab_0                 conda-forge     Cached
+  + cloudpickle                2.2.1  pyhd8ed1ab_0                 conda-forge     Cached
+  + click                      8.1.3  unix_pyhd8ed1ab_2            conda-forge     Cached
+  + appdirs                    1.4.4  pyh9f0ad1d_0                 conda-forge     Cached
+  + zict                       2.2.0  pyhd8ed1ab_0                 conda-forge     Cached
+  + importlib-metadata         6.0.0  pyha770c72_0                 conda-forge     Cached
+  + partd                      1.3.0  pyhd8ed1ab_0                 conda-forge     Cached
+  + six                       1.16.0  pyhd3eb1b0_1                 pkgs/main       Cached
+  + pycparser                   2.21  pyhd3eb1b0_0                 pkgs/main       Cached
+  + flit-core                  3.6.0  pyhd3eb1b0_0                 pkgs/main       Cached
+  + charset-normalizer         2.0.4  pyhd3eb1b0_0                 pkgs/main       Cached
+  + python_abi                   3.8  2_cp38                       conda-forge     Cached
+  + tornado                      6.2  py38h0a891b7_1               conda-forge     Cached
+  + pyyaml                       6.0  py38h0a891b7_5               conda-forge     Cached
+  + psutil                     5.9.4  py38h0a891b7_0               conda-forge     Cached
+  + msgpack-python             1.0.4  py38h43d8883_1               conda-forge     Cached
+  + markupsafe                 2.1.2  py38h1de0b5d_0               conda-forge     Cached
+  + lz4                        4.2.0  py38hd012fdc_0               conda-forge     Cached
+  + llvmlite                  0.39.1  py38h38d86a4_1               conda-forge     Cached
+  + cytoolz                   0.12.0  py38h0a891b7_1               conda-forge     Cached
+  + python-dateutil            2.8.2  pyhd8ed1ab_0                 conda-forge     Cached
+  + dask-core               2023.1.1  pyhd8ed1ab_0                 conda-forge     Cached
+  + jinja2                     3.1.2  pyhd8ed1ab_1                 conda-forge     Cached
+  + mkl-service                2.4.0  py38h7f8727e_0               pkgs/main       Cached
+  + cffi                      1.15.1  py38h5eee18b_3               pkgs/main       Cached
+  + typing_extensions          4.4.0  py38h06a4308_0               pkgs/main       Cached
+  + numpy-base                1.23.5  py38h31eccc5_0               pkgs/main       Cached
+  + cryptography              38.0.4  py38h9ce1e76_0               pkgs/main       Cached
+  + brotlipy                   0.7.0  py38h27cfd23_1003            pkgs/main       Cached
+  + numpy                     1.23.5  py38h14f4228_0               pkgs/main       Cached
+  + mkl_fft                    1.3.1  py38hd3c417c_0               pkgs/main       Cached
+  + mkl_random                 1.2.2  py38h51133e4_0               pkgs/main       Cached
+  + pytorch                   1.12.1  py3.8_cuda11.3_cudnn8.3.2_0  pytorch         Cached
+  + torchaudio                0.12.1  py38_cu113                   pytorch         Cached
+  + pyopenssl                 22.0.0  pyhd3eb1b0_0                 pkgs/main       Cached
+  + shapely                    1.8.5  py38hafd38ec_2               conda-forge     Cached
+  + pandas                     1.5.3  py38hdc8b05c_0               conda-forge     Cached
+  + numcodecs                 0.11.0  py38h8dc9893_1               conda-forge     Cached
+  + numba                     0.56.4  py38h9a4aae9_0               conda-forge     Cached
+  + esmpy                      8.4.0  nompi_py38h2b78397_1         conda-forge     Cached
+  + cftime                     1.6.2  py38h26c90d9_1               conda-forge     Cached
+  + bottleneck                 1.3.6  py38h7e4f40d_0               conda-forge     Cached
+  + netcdf4                    1.6.2  nompi_py38h2250339_100       conda-forge     Cached
+  + bokeh                      2.4.3  pyhd8ed1ab_3                 conda-forge     Cached
+  + xarray                  2023.1.0  pyhd8ed1ab_0                 conda-forge     Cached
+  + zarr                      2.13.6  pyhd8ed1ab_0                 conda-forge     Cached
+  + cf_xarray                  0.7.9  pyhd8ed1ab_0                 conda-forge     Cached
+  + urllib3                  1.26.14  py38h06a4308_0               pkgs/main       Cached
+  + requests                  2.28.1  py38h06a4308_0               pkgs/main       Cached
+  + distributed             2023.1.1  pyhd8ed1ab_0                 conda-forge     Cached
+  + pooch                      1.6.0  pyhd8ed1ab_0                 conda-forge     Cached
+  + dask                    2023.1.1  pyhd8ed1ab_0                 conda-forge     Cached
+  + torchvision               0.13.1  py38_cu113                   pytorch         Cached
+  + torchdata                  0.4.1  py38                         pytorch         Cached
+  + scipy                     1.10.0  py38h14f4228_0               pkgs/main       Cached
+  + sparse                    0.13.0  pyhd8ed1ab_0                 conda-forge     Cached
+  + xesmf                      0.7.0  pyhd8ed1ab_0                 conda-forge     Cached
+
+  Summary:
+
+  Install: 143 packages
+
+  Total download: 0 B
+
+───────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+Downloading and Extracting Packages
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... By downloading and using the CUDA Toolkit conda packages, you accept the terms and conditions of the CUDA End User License Agreement (EULA): https://docs.nvidia.com/cuda/eula/index.html
+
+done
+Installing pip dependencies: ...working... Ran pip subprocess with arguments:
+['/home/hice1/clee3109/climax-inference/climax-env/bin/python', '-m', 'pip', 'install', '-U', '-r', '/home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt', '--exists-action=b']
+Pip subprocess output:
+Collecting absl-py==1.4.0
+  Using cached absl_py-1.4.0-py3-none-any.whl (126 kB)
+Collecting aiohttp==3.8.3
+  Using cached aiohttp-3.8.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
+Collecting aiosignal==1.3.1
+  Using cached aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting antlr4-python3-runtime==4.9.3
+  Using cached antlr4_python3_runtime-4.9.3-py3-none-any.whl
+Collecting async-timeout==4.0.2
+  Using cached async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
+Collecting attrs==22.2.0
+  Using cached attrs-22.2.0-py3-none-any.whl (60 kB)
+Collecting cachetools==5.3.0
+  Using cached cachetools-5.3.0-py3-none-any.whl (9.3 kB)
+Collecting docstring-parser==0.15
+  Using cached docstring_parser-0.15-py3-none-any.whl (36 kB)
+Collecting einops==0.6.0
+  Using cached einops-0.6.0-py3-none-any.whl (41 kB)
+Collecting filelock==3.9.0
+  Using cached filelock-3.9.0-py3-none-any.whl (9.7 kB)
+Collecting fire==0.5.0
+  Using cached fire-0.5.0-py2.py3-none-any.whl
+Collecting frozenlist==1.3.3
+  Using cached frozenlist-1.3.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (161 kB)
+Collecting google-auth==2.16.0
+  Using cached google_auth-2.16.0-py2.py3-none-any.whl (177 kB)
+Collecting google-auth-oauthlib==0.4.6
+  Using cached google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+Collecting grpcio==1.52.0
+  Using cached grpcio-1.52.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.9 MB)
+Collecting huggingface-hub==0.12.0
+  Using cached huggingface_hub-0.12.0-py3-none-any.whl (190 kB)
+Collecting importlib-resources==5.10.2
+  Using cached importlib_resources-5.10.2-py3-none-any.whl (34 kB)
+Collecting jsonargparse==4.19.0
+  Using cached jsonargparse-4.19.0-py3-none-any.whl (180 kB)
+Collecting lightning-lite==1.8.0
+  Using cached lightning_lite-1.8.0-py3-none-any.whl (136 kB)
+Collecting lightning-utilities==0.3.0
+  Using cached lightning_utilities-0.3.0-py3-none-any.whl (15 kB)
+Collecting markdown==3.4.1
+  Using cached Markdown-3.4.1-py3-none-any.whl (93 kB)
+Collecting multidict==6.0.4
+  Using cached multidict-6.0.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (121 kB)
+Collecting oauthlib==3.2.2
+  Using cached oauthlib-3.2.2-py3-none-any.whl (151 kB)
+Collecting omegaconf==2.3.0
+  Using cached omegaconf-2.3.0-py3-none-any.whl (79 kB)
+Collecting protobuf==3.20.3
+  Using cached protobuf-3.20.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.0 MB)
+Collecting pyasn1==0.4.8
+  Using cached pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+Collecting pyasn1-modules==0.2.8
+  Using cached pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+Collecting pytorch-lightning==1.8.0
+  Using cached pytorch_lightning-1.8.0-py3-none-any.whl (795 kB)
+Collecting requests-oauthlib==1.3.1
+  Using cached requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Collecting rsa==4.9
+  Using cached rsa-4.9-py3-none-any.whl (34 kB)
+Collecting tensorboard==2.11.2
+  Using cached tensorboard-2.11.2-py3-none-any.whl (6.0 MB)
+Collecting tensorboard-data-server==0.6.1
+  Using cached tensorboard_data_server-0.6.1-py3-none-manylinux2010_x86_64.whl (4.9 MB)
+Collecting tensorboard-plugin-wit==1.8.1
+  Using cached tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+Collecting termcolor==2.2.0
+  Using cached termcolor-2.2.0-py3-none-any.whl (6.6 kB)
+Collecting timm==0.6.12
+  Using cached timm-0.6.12-py3-none-any.whl (549 kB)
+Collecting torchmetrics==0.11.1
+  Using cached torchmetrics-0.11.1-py3-none-any.whl (517 kB)
+Collecting tqdm==4.64.1
+  Using cached tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+Collecting typeshed-client==2.2.0
+  Using cached typeshed_client-2.2.0-py3-none-any.whl (551 kB)
+Collecting werkzeug==2.2.2
+  Using cached Werkzeug-2.2.2-py3-none-any.whl (232 kB)
+Collecting yarl==1.8.2
+  Using cached yarl-1.8.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (262 kB)
+Requirement already satisfied: charset-normalizer<3.0,>=2.0 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from aiohttp==3.8.3->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 2)) (2.0.4)
+Requirement already satisfied: six in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from fire==0.5.0->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 11)) (1.16.0)
+Requirement already satisfied: pyyaml>=5.1 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from huggingface-hub==0.12.0->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 16)) (6.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from huggingface-hub==0.12.0->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 16)) (4.4.0)
+Requirement already satisfied: packaging>=20.9 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from huggingface-hub==0.12.0->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 16)) (23.0)
+Requirement already satisfied: requests in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from huggingface-hub==0.12.0->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 16)) (2.28.1)
+Requirement already satisfied: zipp>=3.1.0 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from importlib-resources==5.10.2->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 17)) (3.12.1)
+Requirement already satisfied: fsspec[http]>2021.06.0 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from lightning-lite==1.8.0->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 19)) (2023.1.0)
+Requirement already satisfied: torch>=1.9.* in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from lightning-lite==1.8.0->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 19)) (1.12.1)
+Requirement already satisfied: numpy>=1.17.2 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from lightning-lite==1.8.0->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 19)) (1.23.5)
+Requirement already satisfied: importlib-metadata>=4.4 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from markdown==3.4.1->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 21)) (6.0.0)
+Requirement already satisfied: setuptools>=41.0.0 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from tensorboard==2.11.2->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 31)) (65.6.3)
+Requirement already satisfied: wheel>=0.26 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from tensorboard==2.11.2->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 31)) (0.37.1)
+Requirement already satisfied: torchvision in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from timm==0.6.12->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 35)) (0.13.1)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from werkzeug==2.2.2->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 39)) (2.1.2)
+Requirement already satisfied: idna>=2.0 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from yarl==1.8.2->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 40)) (3.4)
+Requirement already satisfied: certifi>=2017.4.17 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from requests->huggingface-hub==0.12.0->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 16)) (2022.12.7)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from requests->huggingface-hub==0.12.0->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 16)) (1.26.14)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /home/hice1/clee3109/climax-inference/climax-env/lib/python3.8/site-packages (from torchvision->timm==0.6.12->-r /home/hice1/clee3109/climax-inference/upstream/docker/condaenv.7rr0j42r.requirements.txt (line 35)) (9.3.0)
+Installing collected packages: tensorboard-plugin-wit, pyasn1, antlr4-python3-runtime, werkzeug, tqdm, termcolor, tensorboard-data-server, rsa, pyasn1-modules, protobuf, omegaconf, oauthlib, multidict, jsonargparse, importlib-resources, grpcio, frozenlist, filelock, einops, docstring-parser, cachetools, attrs, async-timeout, absl-py, yarl, typeshed-client, torchmetrics, requests-oauthlib, markdown, huggingface-hub, google-auth, fire, aiosignal, timm, lightning-utilities, google-auth-oauthlib, aiohttp, tensorboard, lightning-lite, pytorch-lightning
+Successfully installed absl-py-1.4.0 aiohttp-3.8.3 aiosignal-1.3.1 antlr4-python3-runtime-4.9.3 async-timeout-4.0.2 attrs-22.2.0 cachetools-5.3.0 docstring-parser-0.15 einops-0.6.0 filelock-3.9.0 fire-0.5.0 frozenlist-1.3.3 google-auth-2.16.0 google-auth-oauthlib-0.4.6 grpcio-1.52.0 huggingface-hub-0.12.0 importlib-resources-5.10.2 jsonargparse-4.19.0 lightning-lite-1.8.0 lightning-utilities-0.3.0 markdown-3.4.1 multidict-6.0.4 oauthlib-3.2.2 omegaconf-2.3.0 protobuf-3.20.3 pyasn1-0.4.8 pyasn1-modules-0.2.8 pytorch-lightning-1.8.0 requests-oauthlib-1.3.1 rsa-4.9 tensorboard-2.11.2 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.1 termcolor-2.2.0 timm-0.6.12 torchmetrics-0.11.1 tqdm-4.64.1 typeshed-client-2.2.0 werkzeug-2.2.2 yarl-1.8.2
+
+done
+#
+# To activate this environment, use
+#
+#     $ conda activate /home/hice1/clee3109/climax-inference/climax-env
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1032  100  1032    0     0  15876      0 --:--:-- --:--:-- --:--:-- 15876
+  0  412M    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 26  412M   26  107M    0     0  64.6M      0  0:00:06  0:00:01  0:00:05  113M 47  412M   47  196M    0     0  73.9M      0  0:00:05  0:00:02  0:00:03  101M 73  412M   73  303M    0     0  82.9M      0  0:00:04  0:00:03  0:00:01  103M 94  412M   94  388M    0     0  83.4M      0  0:00:04  0:00:04 --:--:-- 98.5M100  412M  100  412M    0     0  86.4M      0  0:00:04  0:00:04 --:--:--  101M
+checkpoints/5.625deg.ckpt: OK
+---------------------------------------
+Begin Slurm Epilog: Oct-11-2026 19:45:56
+Job ID:        6192427
+User ID:       clee3109
+Account:       coc
+Job name:      climax-setup
+Resources:     cpu=8,mem=32G,node=1
+Rsrc Used:     cput=01:26:40,vmem=0,walltime=00:10:50,mem=15758180K,energy_used=0
+Partition:     ice-cpu
+QOS:           coc-ice
+Nodes:         atl1-1-02-003-19-1
+---------------------------------------
