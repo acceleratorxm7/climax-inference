@@ -1,0 +1,353 @@
+{
+  "scope": "Diagnostic only: CMIP6 pretrained weights, assumed normalization, no ERA5 forecast fine-tuning",
+  "data": "https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2022-6h-64x32_equiangular_conservative.zarr",
+  "sample_indices": [
+    0,
+    120,
+    1460,
+    5840,
+    20000,
+    40000,
+    60000,
+    80000
+  ],
+  "lead_hours_ground_truth": 6,
+  "model_lead_time_argument": 0.06,
+  "variables": [
+    "2m_temperature",
+    "10m_u_component_of_wind",
+    "10m_v_component_of_wind"
+  ],
+  "assumed_mean": [
+    280.0,
+    0.0,
+    0.0
+  ],
+  "assumed_std": [
+    20.0,
+    10.0,
+    10.0
+  ],
+  "checkpoint_sha256": "6393876948b8244e65f8b341474a5a14e4242dd4ff4c1db811700935be347c43",
+  "checkpoint_tensors": 209,
+  "source_commit": "6d5d354ffb4b91bb684f430b98e8f6f8af7c7f7c",
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "torch": "1.12.1",
+  "cuda": "11.3",
+  "metric": "latitude-cosine-area-weighted MAE and RMSE, unnormalized physical units",
+  "repeat_max_abs_difference": 0.0,
+  "aggregate": {
+    "2m_temperature": {
+      "model": {
+        "mae": 7.129930408325217,
+        "rmse": 8.601535049099034
+      },
+      "persistence": {
+        "mae": 1.2979422893190815,
+        "rmse": 2.465195543019325
+      }
+    },
+    "10m_u_component_of_wind": {
+      "model": {
+        "mae": 4.455406072727864,
+        "rmse": 5.426946236251897
+      },
+      "persistence": {
+        "mae": 0.9785963371287655,
+        "rmse": 1.486150209038387
+      }
+    },
+    "10m_v_component_of_wind": {
+      "model": {
+        "mae": 3.2047176173361143,
+        "rmse": 4.1310972600207325
+      },
+      "persistence": {
+        "mae": 1.119607023178528,
+        "rmse": 1.7689020219747824
+      }
+    }
+  },
+  "per_sample": [
+    {
+      "index": 0,
+      "results": {
+        "2m_temperature": {
+          "model": {
+            "mae": 6.5439154603099325,
+            "rmse": 7.900849261055388
+          },
+          "persistence": {
+            "mae": 1.180963992489389,
+            "rmse": 2.2474339749223353
+          }
+        },
+        "10m_u_component_of_wind": {
+          "model": {
+            "mae": 4.406961308793753,
+            "rmse": 5.397069030166127
+          },
+          "persistence": {
+            "mae": 0.954166520110219,
+            "rmse": 1.4204017449599509
+          }
+        },
+        "10m_v_component_of_wind": {
+          "model": {
+            "mae": 2.9816167052033604,
+            "rmse": 3.8626530146987768
+          },
+          "persistence": {
+            "mae": 1.037435123647636,
+            "rmse": 1.5516030794209976
+          }
+        }
+      }
+    },
+    {
+      "index": 120,
+      "results": {
+        "2m_temperature": {
+          "model": {
+            "mae": 6.995097083878626,
+            "rmse": 8.426993938308637
+          },
+          "persistence": {
+            "mae": 1.2911461779696527,
+            "rmse": 2.432878129837834
+          }
+        },
+        "10m_u_component_of_wind": {
+          "model": {
+            "mae": 4.364873164362729,
+            "rmse": 5.30218694664266
+          },
+          "persistence": {
+            "mae": 0.9748411626998558,
+            "rmse": 1.5250004020711236
+          }
+        },
+        "10m_v_component_of_wind": {
+          "model": {
+            "mae": 3.1457708403639733,
+            "rmse": 4.141343245886983
+          },
+          "persistence": {
+            "mae": 1.1660564520944818,
+            "rmse": 1.8716138906610806
+          }
+        }
+      }
+    },
+    {
+      "index": 1460,
+      "results": {
+        "2m_temperature": {
+          "model": {
+            "mae": 6.586859795084363,
+            "rmse": 8.072437702245766
+          },
+          "persistence": {
+            "mae": 1.1979259110338225,
+            "rmse": 2.2871416710255925
+          }
+        },
+        "10m_u_component_of_wind": {
+          "model": {
+            "mae": 4.447024518019706,
+            "rmse": 5.451114026875692
+          },
+          "persistence": {
+            "mae": 0.9957557580692663,
+            "rmse": 1.5235299846589747
+          }
+        },
+        "10m_v_component_of_wind": {
+          "model": {
+            "mae": 3.1498436491409367,
+            "rmse": 4.148976968331221
+          },
+          "persistence": {
+            "mae": 1.1488691025828703,
+            "rmse": 1.7686026740993632
+          }
+        }
+      }
+    },
+    {
+      "index": 5840,
+      "results": {
+        "2m_temperature": {
+          "model": {
+            "mae": 6.523563980345666,
+            "rmse": 7.97427158675479
+          },
+          "persistence": {
+            "mae": 1.2313201620532552,
+            "rmse": 2.3399286527902143
+          }
+        },
+        "10m_u_component_of_wind": {
+          "model": {
+            "mae": 4.481613913661526,
+            "rmse": 5.439129206419067
+          },
+          "persistence": {
+            "mae": 1.0081633251968967,
+            "rmse": 1.5134233718051795
+          }
+        },
+        "10m_v_component_of_wind": {
+          "model": {
+            "mae": 3.1641418003432875,
+            "rmse": 4.09737689026706
+          },
+          "persistence": {
+            "mae": 1.120421974657366,
+            "rmse": 1.7260871180658726
+          }
+        }
+      }
+    },
+    {
+      "index": 20000,
+      "results": {
+        "2m_temperature": {
+          "model": {
+            "mae": 7.9317501638080685,
+            "rmse": 9.436432280550306
+          },
+          "persistence": {
+            "mae": 1.4272970566323508,
+            "rmse": 2.664003090598246
+          }
+        },
+        "10m_u_component_of_wind": {
+          "model": {
+            "mae": 4.409569723610704,
+            "rmse": 5.328513199503465
+          },
+          "persistence": {
+            "mae": 1.0336411862578583,
+            "rmse": 1.5194492529208083
+          }
+        },
+        "10m_v_component_of_wind": {
+          "model": {
+            "mae": 3.2435999044244364,
+            "rmse": 4.108847340305808
+          },
+          "persistence": {
+            "mae": 1.099002250302071,
+            "rmse": 1.6937849768836106
+          }
+        }
+      }
+    },
+    {
+      "index": 40000,
+      "results": {
+        "2m_temperature": {
+          "model": {
+            "mae": 7.815685643738439,
+            "rmse": 9.322671301721845
+          },
+          "persistence": {
+            "mae": 1.3917437097198815,
+            "rmse": 2.6334413059392956
+          }
+        },
+        "10m_u_component_of_wind": {
+          "model": {
+            "mae": 4.457679137710199,
+            "rmse": 5.437937184688138
+          },
+          "persistence": {
+            "mae": 0.9475243688614606,
+            "rmse": 1.3635835226492983
+          }
+        },
+        "10m_v_component_of_wind": {
+          "model": {
+            "mae": 3.350353990628803,
+            "rmse": 4.204258020266316
+          },
+          "persistence": {
+            "mae": 1.1442252936554393,
+            "rmse": 1.761704334494506
+          }
+        }
+      }
+    },
+    {
+      "index": 60000,
+      "results": {
+        "2m_temperature": {
+          "model": {
+            "mae": 7.031637397434835,
+            "rmse": 8.39848831980022
+          },
+          "persistence": {
+            "mae": 1.2660867740324402,
+            "rmse": 2.437649367266288
+          }
+        },
+        "10m_u_component_of_wind": {
+          "model": {
+            "mae": 4.363204071397312,
+            "rmse": 5.2977768910342045
+          },
+          "persistence": {
+            "mae": 0.8993362985781397,
+            "rmse": 1.4852622842829903
+          }
+        },
+        "10m_v_component_of_wind": {
+          "model": {
+            "mae": 3.255197140663493,
+            "rmse": 4.215092641414024
+          },
+          "persistence": {
+            "mae": 1.056353811408671,
+            "rmse": 1.6591398058812241
+          }
+        }
+      }
+    },
+    {
+      "index": 80000,
+      "results": {
+        "2m_temperature": {
+          "model": {
+            "mae": 7.610933742001795,
+            "rmse": 9.121802315643476
+          },
+          "persistence": {
+            "mae": 1.3970545306218596,
+            "rmse": 2.639566994135962
+          }
+        },
+        "10m_u_component_of_wind": {
+          "model": {
+            "mae": 4.7123227442669835,
+            "rmse": 5.748303983665825
+          },
+          "persistence": {
+            "mae": 1.0153420772564268,
+            "rmse": 1.529800046463404
+          }
+        },
+        "10m_v_component_of_wind": {
+          "model": {
+            "mae": 3.3472169079206195,
+            "rmse": 4.257813896184196
+          },
+          "persistence": {
+            "mae": 1.1844921770796886,
+            "rmse": 2.071018462363449
+          }
+        }
+      }
+    }
+  ]
+}

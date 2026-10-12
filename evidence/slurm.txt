@@ -1,0 +1,5 @@
+JobID      JobName        Partition  State      ExitCode  Elapsed
+6192427    climax-setup   ice-cpu    COMPLETED  0:0       00:10:50
+6192943    climax-era5    ice-gpu    COMPLETED  0:0       00:00:43
+
+Transcribed from sacct output posted from ICE on October 11, 2026.
